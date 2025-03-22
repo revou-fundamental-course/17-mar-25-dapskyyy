@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Hitung Luas & Keliling Persegi</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Hitung Luas & Keliling Persegi</h1>
+        <svg width="150" height="150" class="square-image">
+            <rect width="150" height="150" style="fill:lightblue;stroke:black;stroke-width:2" />
+        </svg>
+        <p>Rumus Luas: <strong>L = s × s</strong></p>
+        <p>Rumus Keliling: <strong>K = 4 × s</strong></p>
+        <form id="squareForm">
+            <label for="sideLength">Panjang Sisi (cm):</label>
+            <input type="number" id="sideLength" name="sideLength" min="1" required>
+            <button type="submit">Hitung</button>
+        </form>
+        <div id="results" class="hidden">
+            <h2>Hasil Perhitungan:</h2>
+            <p id="areaResult"></p>
+            <p id="perimeterResult"></p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
