@@ -4,25 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Hitung Luas & Keliling Persegi</title>
+    <title>Hitung Luas & Keliling Bangun Datar</title>
+    <style>
+        .form-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+        .form-section {
+            width: 300px;
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
     <div class="container">
-        <h1>Hitung Luas & Keliling Persegi</h1>
-        <svg width="150" height="150" class="square-image">
-            <rect width="150" height="150" style="fill:lightblue;stroke:black;stroke-width:2" />
-        </svg>
-        <p>Rumus Luas: <strong>L = s × s</strong></p>
-        <p>Rumus Keliling: <strong>K = 4 × s</strong></p>
-        <form id="squareForm">
-            <label for="sideLength">Panjang Sisi (cm):</label>
-            <input type="number" id="sideLength" name="sideLength" min="1" required>
-            <button type="submit">Hitung</button>
-        </form>
-        <div id="results" class="hidden">
-            <h2>Hasil Perhitungan:</h2>
-            <p id="areaResult"></p>
-            <p id="perimeterResult"></p>
+        <h1>Hitung Luas & Keliling Bangun Datar</h1>
+
+        <div class="form-container">
+            <!-- Persegi -->
+            <div class="form-section">
+                <h2>Persegi</h2>
+                <svg width="150" height="150" class="square-image">
+                    <rect width="150" height="150" style="fill:lightblue;stroke:black;stroke-width:2" />
+                </svg>
+                <p>Rumus Luas: <strong>L = s × s</strong></p>
+                <p>Rumus Keliling: <strong>K = 4 × s</strong></p>
+                <form id="squareForm">
+                    <label for="sideLength">Panjang Sisi (cm):</label>
+                    <input type="number" id="sideLength" name="sideLength" min="1" required>
+                    <button type="submit" style="background-color: blue; color: white;">Hitung</button>
+                    <button type="reset" style="background-color: red; color: white;">Reset</button>
+                </form>
+                <div id="squareResults" class="hidden">
+                    <h3>Hasil Perhitungan Persegi:</h3>
+                    <p id="areaResult"></p>
+                    <p id="perimeterResult"></p>
+                </div>
+            </div>
+
+            <!-- Persegi Panjang -->
+            <div class="form-section">
+                <h2>Persegi Panjang</h2>
+                <svg width="200" height="100" class="rectangle-image">
+                    <rect width="200" height="100" style="fill:lightgreen;stroke:black;stroke-width:2" />
+                </svg>
+                <p>Rumus Luas: <strong>L = p × l</strong></p>
+                <p>Rumus Keliling: <strong>K = 2 × (p + l)</strong></p>
+                <form id="rectangleForm">
+                    <label for="length">Panjang (cm):</label>
+                    <input type="number" id="length" name="length" min="1" required>
+                    <label for="width">Lebar (cm):</label>
+                    <input type="number" id="width" name="width" min="1" required>
+                    <button type="submit" style="background-color: blue; color: white;">Hitung</button>
+                    <button type="reset" style="background-color: red; color: white;">Reset</button>
+                </form>
+                <div id="rectangleResults" class="hidden">
+                    <h3>Hasil Perhitungan Persegi Panjang:</h3>
+                    <p id="rectAreaResult"></p>
+                    <p id="rectPerimeterResult"></p>
+                </div>
+            </div>
         </div>
     </div>
 
